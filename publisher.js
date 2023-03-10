@@ -5,5 +5,5 @@ const ably = new Ably.Realtime({
 const pubChannel = ably.channels.get("time");
 
 setInterval(() => {
-  pubChannel.publish("update", { Time: Date.now() });
+  pubChannel.publish("update", "hello");
 }, 1000);
